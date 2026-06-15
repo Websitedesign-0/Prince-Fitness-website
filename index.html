@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Fitness | Premium Gym & Club</title>
+    <!-- Importing a professional serif font for headings to give it that luxury feel -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Elegant Luxury Entrance Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="loader-text">PRINCE FITNESS</h1>
+        </div>
+    </div>
+
+    <!-- Responsive Navigation Bar -->
+    <header class="main-header" id="mainHeader">
+        <div class="nav-container" id="navContainer">
+            <!-- Reference to your logo file verbatim with space-safe URL encoding -->
+            <div class="logo-container">
+                <a href="#" class="logo-text-link">
+                    <span class="logo-brand">PRINCE</span>
+                    <span class="logo-sub">FITNESS</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button (For phones/tablets) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#classes">Classes</a>
+                <a href="#trainers">Trainers</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://wa.me/918868880920" class="cta-btn" target="_blank"
+                    style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.66.986 3.298 1.448 5.355 1.449 5.483 0 9.943-4.46 9.947-9.948.002-2.659-1.033-5.16-2.916-7.045-1.882-1.884-4.385-2.92-7.051-2.921-5.485 0-9.944 4.461-9.948 9.95 0 2.015.524 3.61 1.483 5.253L1.5 21.066l4.147-1.912zm11.233-5.267c-.302-.15-1.785-.882-2.057-.982-.272-.099-.47-.15-.668.15-.198.298-.765.982-.938 1.18-.173.199-.347.224-.649.075-.302-.15-1.276-.47-2.43-1.498-.897-.8-1.502-1.787-1.678-2.087-.177-.3-.019-.462.13-.612.135-.135.302-.35.453-.524.15-.174.2-.299.302-.498.102-.199.051-.374-.025-.524-.075-.15-.668-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.785-.73 2.037-1.435.252-.706.252-1.312.177-1.437-.075-.125-.272-.2-.574-.35z" />
+                    </svg>Join Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Professional Hero Section with Responsive Video Background -->
+    <section class="hero-section">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="Media/Video/Background%20Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">DEFINE YOUR <span class="gold-text">LEGACY</span></h1>
+            <p class="hero-subtitle">Elegance meets elite performance. Experience the ultimate premium fitness
+                environment.</p>
+            <a href="#pricing" class="hero-btn">Explore Memberships</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="section-subtitle">The Club</span>
+                <h2 class="section-title">Uncompromising Excellence</h2>
+                <div class="title-divider" style="margin: 15px 0 35px 0;"></div>
+
+                <!-- Brand title inserted immediately preceding the about text -->
+                <h3 class="about-brand-title">PRINCE FITNESS</h3>
+
+                <p>Prince Fitness is more than a gym—it is a sanctuary dedicated to the pursuit of physical and mental
+                    optimization. Combining state-of-the-art biomechanical equipment, world-class coaching, and a
+                    refined architectural environment, we curate an unparalleled experience designed to elevate your
+                    lifestyle.</p>
+                <div class="about-features">
+                    <div class="feature-box">
+                        <h4>Elite Biomechanics</h4>
+                        <p>Access the world's most advanced custom-tailored strength and conditioning suites.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Bespoke Recovery</h4>
+                        <p>Complete your session with cold plunge, hyperbaric oxygen therapy, and steam chambers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-gallery">
+                <div class="about-img about-img-1">
+                    <img src="Media/Photos/WhatsApp%20Image%202026-06-09%20at%2011.21.45%20PM.jpeg"
+                        alt="Premium Training Facility">
+                </div>
+                <div class="about-img about-img-2">
+                    <img src="Media/Photos/WhatsApp%20Image%202026-06-09%20at%202.34.35%20PM.jpeg"
+                        alt="Exclusive Lifting Suite">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="classes-section">
+        <div class="section-title-container">
+            <span class="section-subtitle">Curated Programming</span>
+            <h2 class="section-title">Signature Disciplines</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="classes-grid">
+            <!-- Class Card 1 -->
+            <div class="class-card">
+                <div class="class-card-bg"
+                    style="background-image: url('Media/Photos/WhatsApp%20Image%202026-06-09%20at%202.34.35%20PM.jpeg');">
+                </div>
+                <div class="class-card-overlay"></div>
+                <div class="class-card-content">
+                    <h3>Elite Strength</h3>
+                    <p>Unlock peak power and hypertrophy through scientific weightlifting protocols led by national
+                        weightlifting coaches.</p>
+                    <div class="class-details">
+                        <span>60 Min</span>
+                        <span>•</span>
+                        <span>Advanced</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Class Card 2 -->
+            <div class="class-card">
+                <div class="class-card-bg"
+                    style="background-image: url('Media/Photos/WhatsApp%20Image%202026-06-09%20at%2011.21.45%20PM.jpeg');">
+                </div>
+                <div class="class-card-overlay"></div>
+                <div class="class-card-content">
+                    <h3>Athletic Condition</h3>
+                    <p>High-intensity energy system development designed to torch fat and optimize cardiovascular
+                        performance.</p>
+                    <div class="class-details">
+                        <span>45 Min</span>
+                        <span>•</span>
+                        <span>All Levels</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Class Card 3 -->
+            <div class="class-card">
+                <div class="class-card-bg"
+                    style="background-image: url('Media/Photos/WhatsApp%20Image%202026-06-09%20at%202.34.35%20PM.jpeg'); filter: hue-rotate(15deg);">
+                </div>
+                <div class="class-card-overlay"></div>
+                <div class="class-card-content">
+                    <h3>Reformer Pilates</h3>
+                    <p>Deep core activation, posture refinement, and dynamic flexibility work in our bespoke glass
+                        studio.</p>
+                    <div class="class-details">
+                        <span>50 Min</span>
+                        <span>•</span>
+                        <span>Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Refined Master Instructors Section -->
+    <section id="trainers" class="trainers-section">
+        <p class="section-subtitle">ELITE MENTORSHIP</p>
+        <h2 class="section-title">Master Instructors</h2>
+        <div class="title-divider"></div>
+
+        <div class="instructors-grid">
+            <!-- Card 1 -->
+            <div class="instructor-card">
+                <div class="card-img-wrapper">
+                    <a href="Media/Photos/Trainer_1.jpeg" target="_blank" class="instructor-img-link">
+                        <img src="Media/Photos/Trainer_1.jpeg" alt="Alexander Vance" class="instructor-img">
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>Alexander Vance</h3>
+                    <p class="specialty">STRENGTH & BIOMECHANICS</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/princefitness11_/" class="social-link"
+                            target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="instructor-card">
+                <div class="card-img-wrapper">
+                    <a href="Media/Photos/Trainer_2.jpeg" target="_blank" class="instructor-img-link">
+                        <img src="Media/Photos/Trainer_2.jpeg" alt="Elena Rostova" class="instructor-img">
+                    </a>
+                </div>
+                <div class="card-info">
+                    <h3>Elena Rostova</h3>
+                    <p class="specialty">OLYMPIC WEIGHTLIFTING</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/princefitness11_/" class="social-link"
+                            target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-title-container">
+            <span class="section-subtitle">Investment</span>
+            <h2 class="section-title">Memberships</h2>
+            <div class="title-divider"></div>
+        </div>
+        <div class="pricing-grid">
+            <!-- Plan 1 -->
+            <div class="pricing-card">
+                <div>
+                    <h3>Executive Access</h3>
+                    <div class="pricing-price">₹1,000<span>/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>Access to all strength and cardio suites</li>
+                        <li>Luxury locker room & towel service</li>
+                        <li>Complimentary body composition analysis</li>
+                        <li>Access to 5 group classes/mo</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="pricing-btn">Select Membership</a>
+            </div>
+            <!-- Plan 2 -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Exclusive</div>
+                <div>
+                    <h3>VIP Club Lounge</h3>
+                    <div class="pricing-price">₹1,500<span>/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>24/7 Priority Club access</li>
+                        <li>Unlimited signature disciplines classes</li>
+                        <li>Weekly custom programming session</li>
+                        <li>Thermal wellness suite & lounge access</li>
+                        <li>1 Guest pass per month</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="pricing-btn">Select Membership</a>
+            </div>
+            <!-- Plan 3 -->
+            <div class="pricing-card">
+                <div>
+                    <h3>Elite Performance</h3>
+                    <div class="pricing-price">₹2,000<span>/mo</span></div>
+                    <ul class="pricing-features">
+                        <li>Dedicated Master Coach (4 sessions/mo)</li>
+                        <li>Personal nutrition and lab analysis</li>
+                        <li>Unlimited thermal and recovery suite access</li>
+                        <li>Private locker & laundry service</li>
+                        <li>Complimentary gym bag & performance gear</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="pricing-btn">Select Membership</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <span class="section-subtitle">Begin Your Journey</span>
+                <h3>Request Private Tour</h3>
+                <p>To preserve the elite environment and focus of our members, entry is restricted. Contact our
+                    membership directors today to request a private walkthrough and consultation.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Near Union Bank, Behind Bikaner, Roorkee, Bhagwanpur, Uttarakhand 247661</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div class="contact-text">
+                            <h4>Inquiries</h4>
+                            <p>
+                                <a href="mailto:husseygada@gmail.com" class="contact-link">husseygada@gmail.com</a><br>
+                                <a href="tel:+918868880920" class="contact-link">+91 88688 80920</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form glass-panel">
+                <form id="tourForm"
+                    onsubmit="event.preventDefault(); alert('Your request for a private tour has been submitted. A membership director will reach out within 2 hours.'); this.reset();">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required class="form-control" placeholder="Alexander Wright">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required class="form-control" placeholder="alex@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="tier">Preferred Membership Tier</label>
+                        <select id="tier" class="form-control">
+                            <option value="executive">Executive Access (₹1,000/mo)</option>
+                            <option value="vip" selected>VIP Club Lounge (₹1,500/mo)</option>
+                            <option value="elite">Elite Performance (₹2,000/mo)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Introduce Yourself</label>
+                        <textarea id="message" class="form-control"
+                            placeholder="Please describe your current fitness objectives..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Request Invitation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <!-- Column 1 (Left) -->
+            <div class="footer-col brand-col">
+                <img src="Media/Icons/Logo.jpeg" alt="Prince Fitness Logo" class="footer-logo">
+                <p class="footer-tagline">Define Your Legacy</p>
+            </div>
+            
+            <!-- Column 2 (Center) -->
+            <div class="footer-col location-col">
+                <h4 class="footer-col-title">OFFICIAL CLUB LOCATION</h4>
+                <p>Near Union Bank, Behind Bikaner, Roorkee,</p>
+                <p>Bhagwanpur, Uttarakhand 247661</p>
+            </div>
+            
+            <!-- Column 3 (Right) -->
+            <div class="footer-col links-col">
+                <h4 class="footer-col-title">Quick Links</h4>
+                <div class="footer-links-list">
+                    <a href="#about">About</a>
+                    <a href="#classes">Classes</a>
+                    <a href="#trainers">Trainers</a>
+                    <a href="#pricing">Pricing</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider"></div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prince Fitness Club. All Rights Reserved. Designed for elite athletes.</p>
+        </div>
+    </footer>
+
+    <!-- Floating social action icons (Single Instagram icon in the bottom-right corner) -->
+    <a href="https://www.instagram.com/princefitness11_/" class="instagram-float" target="_blank"
+        aria-label="Follow on Instagram">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+        </svg>
+    </a>
+
+    <script>
+        // Smooth glass header scrolling effect
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile navigation toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navContainer = document.getElementById('navContainer');
+
+        menuToggle.addEventListener('click', function () {
+            navContainer.classList.toggle('nav-open');
+        });
+
+        // Close menu when link is clicked
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navContainer.classList.remove('nav-open');
+            });
+        });
+
+        // Entrance Loader Fade-Out and Autoplay Video Force
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader');
+            setTimeout(function () {
+                loader.classList.add('fade-out');
+            }, 1800);
+
+            // Force play background video to prevent browser pause/autoplay blocks
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                const playVideo = () => {
+                    video.play().catch(err => {
+                        console.log("Autoplay blocked, waiting for interaction");
+                    });
+                };
+                playVideo();
+                // Play on first user interaction if blocked
+                window.addEventListener('click', playVideo, { once: true });
+                window.addEventListener('scroll', playVideo, { once: true });
+                window.addEventListener('touchstart', playVideo, { once: true });
+            }
+        });
+    </script>
+</body>
+
+</html>
