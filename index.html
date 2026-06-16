@@ -300,11 +300,15 @@
                 <form id="tourForm">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" required class="form-control" placeholder="Alexander Wright">
+                        <input type="text" id="name" required class="form-control" placeholder="Rohit Sharma">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required class="form-control" placeholder="+91 98765 43210">
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" required class="form-control" placeholder="alex@domain.com">
+                        <input type="email" id="email" class="form-control" placeholder="rohit@domain.com">
                     </div>
                     <div class="form-group">
                         <label for="tier">Preferred Membership Tier</label>
@@ -430,6 +434,24 @@
 
         // Handle Form Submission to Supabase
         const tourForm = document.getElementById('tourForm');
+        const successModal = document.getElementById('successModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        if (closeModalBtn && successModal) {
+            closeModalBtn.addEventListener('click', function () {
+                successModal.classList.remove('active');
+            });
+        }
+
+        // Close modal when clicking outside content area
+        if (successModal) {
+            successModal.addEventListener('click', function (e) {
+                if (e.target === successModal) {
+                    successModal.classList.remove('active');
+                }
+            });
+        }
+
         if (tourForm) {
             tourForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
@@ -440,6 +462,7 @@
                 submitBtn.disabled = true;
 
                 const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
                 const email = document.getElementById('email').value;
                 const tier = document.getElementById('tier').value;
                 const message = document.getElementById('message').value;
@@ -448,12 +471,17 @@
                     const { error } = await _supabase
                         .from('inquiries')
                         .insert([
-                            { name: name, email: email, tier: tier, message: message }
+                            { name: name, phone: phone, email: email, tier: tier, message: message }
                         ]);
 
                     if (error) throw error;
 
-                    alert('Your request for a private tour has been submitted. A membership director will reach out within 2 hours.');
+                    // Show custom success modal
+                    if (successModal) {
+                        successModal.classList.add('active');
+                    } else {
+                        alert('Your request for a private tour has been submitted. A membership director will reach out within 2 hours.');
+                    }
                     tourForm.reset();
                 } catch (err) {
                     console.error("Submission error:", err);
@@ -465,6 +493,16 @@
             });
         }
     </script>
+
+    <!-- Beautiful Custom Success Modal -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <div class="modal-icon">✓</div>
+            <h3>Request Submitted</h3>
+            <p>Your request for a private tour has been submitted. A membership director will reach out within 2 hours.</p>
+            <button id="closeModalBtn" class="modal-btn">Okay</button>
+        </div>
+    </div>
 </body>
 
 </html>
