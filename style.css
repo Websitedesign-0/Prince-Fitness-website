@@ -1347,11 +1347,27 @@ textarea.form-control {
     .nav-container {
         justify-content: space-between;
     }
+
+    .main-header {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: transparent !important;
+        border-bottom: none !important;
+    }
+
+    .logo-container {
+        margin-left: 0 !important;
+        padding-left: 15px !important;
+    }
     
     .hero-section,
     .video-wrapper-horizontal {
         height: 100vh !important;
+        min-height: 100vh !important;
         height: 100dvh !important;
+        min-height: 100dvh !important;
         aspect-ratio: auto !important;
         display: flex !important;
         align-items: center !important;
@@ -1366,6 +1382,7 @@ textarea.form-control {
         object-fit: cover !important;
         width: 100% !important;
         height: 100% !important;
+        min-height: 100% !important;
         position: absolute !important;
         top: 0 !important;
         left: 0 !important;
