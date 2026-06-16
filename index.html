@@ -297,8 +297,7 @@
                 </div>
             </div>
             <div class="contact-form glass-panel">
-                <form id="tourForm"
-                    onsubmit="event.preventDefault(); alert('Your request for a private tour has been submitted. A membership director will reach out within 2 hours.'); this.reset();">
+                <form id="tourForm">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" required class="form-control" placeholder="Alexander Wright">
@@ -419,6 +418,52 @@
                 window.addEventListener('touchstart', playVideo, { once: true });
             }
         });
+    </script>
+
+    <!-- Supabase CDN and Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Initialize Supabase client
+        const SUPABASE_URL = "https://wxddkotrdmvineixwhoy.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4ZGRrb3RyZG12aW5laXh3aG95Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1NzIxOTcsImV4cCI6MjA5NzE0ODE5N30.pYMMcugFqNZKOk_Rl5yEDrrl0K9rRfXNHJG-xjMQ44Y";
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Handle Form Submission to Supabase
+        const tourForm = document.getElementById('tourForm');
+        if (tourForm) {
+            tourForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                
+                const submitBtn = tourForm.querySelector('.submit-btn');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = "Submitting...";
+                submitBtn.disabled = true;
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const tier = document.getElementById('tier').value;
+                const message = document.getElementById('message').value;
+
+                try {
+                    const { error } = await _supabase
+                        .from('inquiries')
+                        .insert([
+                            { name: name, email: email, tier: tier, message: message }
+                        ]);
+
+                    if (error) throw error;
+
+                    alert('Your request for a private tour has been submitted. A membership director will reach out within 2 hours.');
+                    tourForm.reset();
+                } catch (err) {
+                    console.error("Submission error:", err);
+                    alert("Error submitting invitation request: " + (err.message || err));
+                } finally {
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
     </script>
 </body>
 
