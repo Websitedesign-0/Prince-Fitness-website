@@ -1425,6 +1425,9 @@ textarea.form-control {
 .form-control option {
     background-color: #0f0f0f;
     color: var(--white);
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Custom Success Modal Styles */
